@@ -1,0 +1,310 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =================
+  LAYOUT
+================= */
+.container{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header, footer{
+    background-color: #F8F8F8;
+    text-align: center;
+}
+
+header{
+    padding: 1em 0;
+    margin-bottom: 3em;
+}
+
+footer{ padding: 2.5em 0 }
+
+.line{
+    border-bottom: 1px #707070 solid;
+    margin: 2.5em 0;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-article-image,
+.recent-article-image,
+.recent-article-image2,
+.recent-article-image3,
+.about-me-image{
+        width: 100%;
+        height: 242px;
+        object-fit: cover;
+        object-position: bottom;
+}
+
+.about-me-image{
+    height: 420px;
+}
+
+.recent-article-image{
+        object-position: center;
+}
+
+.widget-image{
+        width: 100%;
+        height: 133px;
+        object-fit: cover;
+}
+
+
+/* =================
+  TYPOGRAPHY
+================= */
+header h1{
+    margin: 0;
+    color: #143774;
+    font-family: 'Lora', serif;
+    font-size: 2.0625rem;
+    font-weight: 800;
+    animation-name: colorChange;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction:alternate;
+}
+
+header p{
+    margin-top: 0;
+    color: #1792D2;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+nav ul{
+    padding: 0;
+}
+
+nav li{
+    list-style: none;
+    margin: 0.7em 0;
+}
+
+nav a{
+    color: #717171;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: #1792D2;
+}
+
+a:hover, a:focus{text-decoration: underline}
+
+nav a:hover,
+nav a:focus{
+    color: #1792D2;
+    text-decoration: none;
+}
+
+.current-page{
+    border-bottom: 1.9px solid;
+    border-top: 1.9px solid;
+    color: #717171;
+    padding-bottom: 3px;
+}
+
+footer p{
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.3em;
+    color: #1792D2;
+    font-weight: 700;
+}
+
+.footer-copyright{
+    font-weight: 300;
+}
+
+.featured-article,
+.recent-article{
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-article{
+    margin-bottom: 4em;
+}
+
+.recent-article-item-container{
+    order: 2;
+}
+
+.recent-article-item-container2{
+    order: 1;
+}
+
+.featured-article-image,
+.about-me-image{
+    order: -2;
+}
+
+strong,
+.article-call-to-action,
+#article-call-to-action{
+    font-weight: 700;
+}
+
+.featured-article-title,
+.recent-article-title,
+.about-me-title,
+.about-me-subtitle{
+    color: #143774;
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+.about-me-title{
+    margin-top: 1.5em;
+}
+
+.about-me-subtitle{
+    color: #1792D2;
+    font-size: 1.3125rem;
+}
+
+.recent-article-info,
+.featured-article-info,
+#recent-article-info{
+    color: #707070;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin: 2.5em 0 1.3em 0;
+    order: -1;
+}
+
+.article-intro-text,
+#article-intro-text{
+    color: #707070;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+#article-intro-text{
+    margin-bottom: 4em;
+}
+
+.article-call-to-action,
+#article-call-to-action{
+    color: #1792D2;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.widget,
+.widget2{
+    border: 20px solid #EBEBEB;
+    padding: 0.5em 2em;
+    margin-bottom: 3em;
+}
+
+.widget-text, .widget-title{
+    color: #143774;
+    font-size: 1.125rem;
+}
+
+.widget-text{
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+.widget-title{
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =================
+ MEDIA QUERIES
+================= */
+@keyframes colorChange {
+    0%{
+        color: #143774;
+    }
+
+    55%{
+        color: magenta;
+    }
+
+    100%{
+        color: #1792D2;
+    }
+}
+
+@media (min-width: 800px){
+    .flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .flex2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:flex-start;
+    }
+
+    main{
+        width: 66%;
+    }
+
+    aside{
+        width: 28%;
+    }
+
+    .recent-article-item-container{
+        width: 60%;
+    }
+
+    .recent-article-item-container2{
+        width: 37%;
+    }
+
+    header{
+        text-align: left;
+        padding: 1.5em 0;
+    }
+
+    nav a{
+        margin-left: 1.4em;
+    }
+
+    .recent-article-info,
+    .featured-article-info{
+        margin-top: 1em;
+    }
+    
+    #recent-article-info{
+        margin-top: 1em;
+    } 
+}
