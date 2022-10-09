@@ -2,7 +2,7 @@
 <img src="./img/desktop-view.png">
 
 
-Live Demo Here:
+Live Demo Here:  https://agbesochristian.github.io/Blog-site/
 
 
 ## Key Learnings
